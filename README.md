@@ -18,7 +18,7 @@ The attack started with a high-urgency SMS regarding a tax repayment.
 * **Malicious URL:** `https://revenue.onlinetax-credit.com`
 
 <p align="center">
-  <img src="01.Suspicious%20Png.jpeg" width="350" title="Malicious SMS Lure">
+  <img src="01.Suspicious%20Png.png" width="350" title="Malicious SMS Lure">
   <br><i>Figure 1: Original Smishing SMS received by the target.</i>
 </p>
 
@@ -35,7 +35,7 @@ Using **urlscan.io** and **Whois**, I identified the following:
 The site utilized **User-Agent Filtering**. It redirected desktop browsers to the real `revenue.ie` while showing the phishing page only to mobile users. This prevents automated security scanners from flagging the site.
 
 <p align="center">
-  <img src="02.phishing%20page.jpeg" width="350" title="Mobile Phishing Page">
+  <img src="02.phishing%20page.png" width="350" title="Mobile Phishing Page">
 </p>
 
 ---
