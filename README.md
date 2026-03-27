@@ -2,188 +2,263 @@
 
 ---
 
-## 📌 Introduction
+## 📌 1. Introduction
 
-This project documents a real-world phishing investigation conducted from a Security Operations Center (SOC) perspective.
+This project presents a real-world phishing investigation conducted using a **Security Operations Center (SOC)** approach.
 
-A suspicious SMS claiming to be from Revenue (Irish Tax Authority) was received, offering a tax refund and requesting login through a provided link. Due to multiple red flags, a structured investigation was performed.
+A suspicious SMS claiming to be from Revenue (Irish Tax Authority) was received. The message attempted to lure the user into clicking a malicious link and entering sensitive information such as PPS number, date of birth, and account credentials.
+
+Instead of assuming it as malicious immediately, a structured investigation methodology was followed to validate the threat.
 
 ---
 
-## 📩 Incident Overview
+## 📩 2. Incident Overview
 
-- **Source:** SMS message  
-- **Theme:** Tax refund scam  
-- **URL:** revenue.onlinetax-credit.com  
+- **Source:** SMS (Social Engineering Vector)
+- **Attack Type:** Phishing / Credential Harvesting
+- **Target:** General public (Revenue users)
+- **Malicious URL:** `revenue.onlinetax-credit.com`
 
-### 🚨 Initial Red Flags
-- Domain mismatch (.com instead of official .ie)
+### 🚨 Initial Suspicion Indicators
+
+- Domain mismatch (`.com` vs official `.ie`)
+- Urgency-based message (tax refund bait)
 - Suspicious website behavior
-- Request for sensitive user data
+- Request for sensitive personal and financial data
 
 ---
 
-## 🧠 Key Concepts (Simple)
+## 🧠 3. Key Terminology (Beginner Friendly)
 
-- **Phishing:** Fake message/website used to steal sensitive data  
-- **Domain:** Website name  
-- **DNS:** Converts domain → IP address  
-- **WHOIS:** Domain registration details  
-- **IP Address:** Server identity  
-- **Cloudflare:** Service used to hide real server  
-- **IOC:** Evidence of attack  
-
----
-
-## 🔍 Investigation Steps
-
-### 📱 SMS Evidence
-![SMS](Evidence/01_suspicious.png)
+- **Phishing:** A cyber attack where attackers impersonate trusted entities to steal sensitive information.
+- **Domain:** The address of a website (e.g., google.com).
+- **Subdomain:** A subdivision of a domain (e.g., login.google.com).
+- **DNS (Domain Name System):** Translates domain names into IP addresses.
+- **WHOIS:** A service used to retrieve domain registration details.
+- **IP Address:** A unique identifier assigned to servers.
+- **Cloudflare:** A service that acts as a proxy, hiding the actual server.
+- **IOC (Indicators of Compromise):** Evidence indicating malicious activity.
 
 ---
 
-### 🌐 Phishing Page
-![Phishing](Evidence/02_phishing_page.png)
+## 🔍 4. Investigation Methodology
 
 ---
 
-### 🧾 WHOIS Analysis
-![WHOIS](Evidence/03_whois_result.png)
+### 📱 4.1 Suspicious SMS Evidence
 
-**Finding:**
-- No WHOIS record → suspicious / hidden domain
+![SMS Evidence](01_suspicious.png)
 
----
-
-### 🌍 DNS Resolution
-![DNS](Evidence/04_dns_resolution.png)
-
-**Finding:**
-- IPs:
-  - 104.21.83.22  
-  - 172.67.167.84  
-
-➡ Hosted via Cloudflare (masking real server)
+✔ SMS contains phishing link  
+✔ Uses social engineering (tax refund lure)
 
 ---
 
-### 🌐 Nameserver Analysis
-![Nameserver](Evidence/05_nameserver_info.png)
+### 🌐 4.2 Phishing Website Analysis
 
-**Finding:**
-- Cloudflare DNS used  
-- Not official infrastructure  
+![Phishing Page](02_phishing_page.png)
 
----
-
-### ❌ Root Domain Check
-![Root Domain](Evidence/06_root_domain_check.png)
-
-**Finding:**
-- No output  
-➡ Only phishing subdomain active  
+✔ Website mimics legitimate Revenue login  
+✔ Requests sensitive user credentials  
 
 ---
 
-### 🌍 IP Analysis
-![IP](Evidence/07_ip_analysis.png)
+### ⚠️ 4.3 Website Behavior Analysis
 
-**Finding:**
-- Belongs to Cloudflare  
-➡ Used for anonymity  
+- Navigation links not functional  
+- Buttons reload same page  
+- No real backend interaction  
 
----
-
-### 🧪 URLScan Analysis
-![URLScan](Evidence/08_urlscan.png)
-
-**Finding:**
-- Newly created domain  
-- Not yet flagged  
-➡ Early-stage phishing  
+👉 Indicates a **static phishing page designed for credential harvesting**
 
 ---
 
-### 📊 Google Safe Browsing
-![Google](Evidence/09_google_report.png)
+### 🧾 4.4 WHOIS Analysis
 
-**Finding:**
-- No classification  
-➡ Confirms new attack  
+![WHOIS Result](03_whois_result.png)
 
----
+### Findings:
+- No WHOIS record found  
 
-## 🚨 Key Findings
-
-- Newly created domain 🚩  
-- Fake Revenue impersonation 🚩  
-- Cloudflare masking ⚠️  
-- Root domain inactive 🚩  
-- Fake website behavior 🚩  
-- Not detected by tools ⚠️  
+### Interpretation:
+- Domain may be newly registered or hidden  
+- Legitimate organizations maintain transparent records  
 
 ---
 
-## 🧾 Indicators of Compromise (IOCs)
+### 🌍 4.5 DNS Resolution
 
-- revenue.onlinetax-credit.com  
-- 104.21.83.22  
-- 172.67.167.84  
+![DNS Resolution](04_dns_resolution.png)
+
+### Findings:
+- IP Addresses:
+  - `104.21.83.22`
+  - `172.67.167.84`
+
+### Interpretation:
+- Hosted behind Cloudflare  
+- Real origin server is masked  
+
+---
+
+### 🌐 4.6 Nameserver Analysis
+
+![Nameserver Info](05_nameserver_info.png)
+
+### Findings:
 - arvind.ns.cloudflare.com  
 - annalise.ns.cloudflare.com  
 
+### Interpretation:
+- Cloudflare-managed DNS  
+- No association with official government infrastructure  
+
 ---
 
-## ⚠️ Risk Analysis
+### ❌ 4.7 Root Domain Analysis
 
-### Risks:
+![Root Domain Check](06_root_domain_check.png)
+
+### Findings:
+- No DNS resolution for root domain  
+
+### Interpretation:
+- Only phishing subdomain is active  
+- Indicates **selective deployment strategy** used by attackers  
+
+---
+
+### 🌍 4.8 IP Address Analysis
+
+![IP Analysis](07_ip_analysis.png)
+
+### Findings:
+- IP belongs to Cloudflare network  
+
+### Interpretation:
+- Used to hide attacker infrastructure  
+- Prevents direct attribution  
+
+---
+
+### 🧪 4.9 URLScan Analysis
+
+![URLScan](08_urlscan.png)
+
+### Findings:
+- Domain created recently  
+- No classification in threat intelligence databases  
+- TLS certificate valid for short duration  
+
+### Interpretation:
+- Early-stage phishing campaign  
+- Not yet widely detected  
+
+---
+
+### 📊 4.10 External Validation (Google Safe Browsing)
+
+![Google Report](09_google_report.png)
+
+### Findings:
+- No classification  
+
+### Interpretation:
+- Confirms newly launched phishing infrastructure  
+
+---
+
+## 🚨 5. Key Technical Findings
+
+- Newly registered domain (high-risk indicator)
+- Domain impersonation targeting Revenue users
+- Cloudflare used for anonymization
+- Subdomain-only activation (evasion technique)
+- Static phishing page behavior
+- Not detected by automated tools
+
+---
+
+## 🧾 6. Indicators of Compromise (IOCs)
+
+| Type | Value |
+|------|------|
+| Domain | revenue.onlinetax-credit.com |
+| Root Domain | onlinetax-credit.com |
+| IP Address | 104.21.83.22 |
+| IP Address | 172.67.167.84 |
+| Nameservers | arvind.ns.cloudflare.com |
+| Nameservers | annalise.ns.cloudflare.com |
+
+---
+
+## ⚠️ 7. Risk Analysis
+
+### 🔴 Risks
 - Credential theft  
 - Identity fraud  
 - Financial loss  
 
-### Impact:
-- Account takeover  
+### 💥 Potential Impact
+- Unauthorized account access  
 - Bank detail manipulation  
-- Refund theft  
+- Fraudulent transactions  
 
 ---
 
-## 🧠 MITRE ATT&CK
+## 🧠 8. MITRE ATT&CK Mapping
 
-- T1566 – Phishing  
-- T1204 – User Execution  
-- T1056 – Credential Capture  
-
----
-
-## 📚 Lessons Learned
-
-- New phishing sites are often undetected  
-- Manual investigation is critical  
-- DNS & domain analysis are powerful  
-- Cloudflare is commonly abused by attackers  
-- User awareness is key defense  
+| Technique ID | Technique |
+|-------------|----------|
+| T1566 | Phishing |
+| T1204 | User Execution |
+| T1056 | Credential Capture |
 
 ---
 
-## 📊 Conclusion
+## 🛡️ 9. Security Recommendations
+
+- Avoid clicking links from unknown SMS messages  
+- Verify official domains before entering credentials  
+- Enable Multi-Factor Authentication (MFA)  
+- Use trusted security tools  
+- Report phishing attempts to authorities  
+
+---
+
+## 📚 10. Lessons Learned
+
+- Newly created phishing domains often bypass detection tools  
+- Manual investigation is critical in early-stage threats  
+- DNS and domain analysis provide strong indicators  
+- Cloudflare infrastructure is frequently abused by attackers  
+- User awareness is the first line of defense  
+
+---
+
+## 📊 11. Conclusion
 
 This investigation confirms a **high-confidence phishing attack**.
 
-The attacker used:
+The attacker leveraged:
 - Domain impersonation  
-- Cloudflare infrastructure  
-- Selective DNS setup  
+- Cloudflare proxy infrastructure  
+- Selective DNS configuration  
+
+This case demonstrates the importance of:
+- Structured investigation  
+- Critical thinking  
+- Real-world analysis beyond automated tools  
 
 ---
 
-## 📸 Evidence
+## 📸 12. Evidence
 
-All screenshots are stored in the `Evidence/` folder.
+All screenshots are included in this repository.
 
 ---
 
-## 🙋‍♂️ Author
+## 🙋‍♂️ 13. Author
 
-Sarath Pulicherla  
-Aspiring SOC Analyst
+**Sarath Pulicherla**  
+Aspiring SOC Analyst | Cybersecurity Learner
