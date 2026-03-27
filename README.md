@@ -48,7 +48,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 📱 4.1 Suspicious SMS Evidence
 
 <p align="center">
-  <img src="01_Suspicious.png" width="300">
+  <img src="01_Suspicious.png" width="150">
 </p>
 
 ✔ SMS contains phishing link  
@@ -59,7 +59,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 🌐 4.2 Phishing Website Analysis
 
 <p align="center">
-  <img src="02_phishing_page.png" width="500">
+  <img src="02_phishing_page.png" width="150">
 </p>
 
 ✔ Website mimics legitimate Revenue login  
@@ -80,7 +80,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 🧾 4.4 WHOIS Analysis
 
 <p align="center">
-  <img src="03_whois_result.png" width="600">
+  <img src="03_whois_result.png" width="500">
 </p>
 
 ### Findings:
@@ -95,7 +95,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 🌍 4.5 DNS Resolution
 
 <p align="center">
-  <img src="04_dns_resolution.png" width="600">
+  <img src="04_dns_resolution.png" width="500">
 </p>
 
 ### Findings:
@@ -112,7 +112,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 🌐 4.6 Nameserver Analysis
 
 <p align="center">
-  <img src="05_nameserver_info.png" width="600">
+  <img src="05_nameserver_info.png" width="500">
 </p>
 
 ### Findings:
@@ -128,7 +128,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### ❌ 4.7 Root Domain Analysis
 
 <p align="center">
-  <img src="06_root_domain_check.png" width="600">
+  <img src="06_root_domain_check.png" width="500">
 </p>
 
 ### Findings:
@@ -143,7 +143,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 🌍 4.8 IP Address Analysis
 
 <p align="center">
-  <img src="07_ip_analysis.png" width="600">
+  <img src="07_ip_analysis.png" width="500">
 </p>
 
 ### Findings:
@@ -158,7 +158,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 🧪 4.9 URLScan Analysis
 
 <p align="center">
-  <img src="08_Urlscan.png" width="600">
+  <img src="08_Urlscan.png" width="500">
 </p>
 
 ### Findings:
@@ -175,7 +175,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 📊 4.10 External Validation (Google Safe Browsing)
 
 <p align="center">
-  <img src="09_google_report.png" width="600">
+  <img src="09_google_report.png" width="500">
 </p>
 
 ### Findings:
