@@ -47,7 +47,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 
 ### 📱 4.1 Suspicious SMS Evidence
 
-![SMS Evidence](01_suspicious.png)
+![SMS Evidence](01_Suspicious.png)
 
 ✔ SMS contains phishing link  
 ✔ Uses social engineering (tax refund lure)
@@ -143,7 +143,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 
 ### 🧪 4.9 URLScan Analysis
 
-![URLScan](08_urlscan.png)
+![URLScan](08_Urlscan.png)
 
 ### Findings:
 - Domain created recently  
