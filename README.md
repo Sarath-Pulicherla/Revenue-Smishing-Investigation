@@ -1,7 +1,7 @@
 
 # 🛡️ SOC Investigation Report: Revenue.ie Smishing Campaign
 **Analyst:** Sarath Pulicherla  
-**Focus:** Infrastructure Analysis, R# 🚨 Phishing Investigation Report – Revenue SMS Scam
+**Focus:** Infrastructure Analysis, 🚨 Phishing Investigation Report – Revenue SMS Scam
 
 ---
 
@@ -29,7 +29,7 @@ Instead of immediately assuming it was malicious, a structured investigation pro
 
 ---
 
-## 🧠 3. Key Cybersecurity Terms (Beginner Friendly)
+## 🧠 3. Key Cybersecurity Terms 
 
 ### 🔐 Phishing
 A type of cyber attack where attackers trick users into entering sensitive information (like passwords or bank details) on fake websites.
