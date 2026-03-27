@@ -47,7 +47,9 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 
 ### 📱 4.1 Suspicious SMS Evidence
 
-![SMS Evidence](01_Suspicious.png)
+<p align="center">
+  <img src="01_Suspicious.png" width="300">
+</p>
 
 ✔ SMS contains phishing link  
 ✔ Uses social engineering (tax refund lure)
@@ -56,7 +58,9 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 
 ### 🌐 4.2 Phishing Website Analysis
 
-![Phishing Page](02_phishing_page.png)
+<p align="center">
+  <img src="02_phishing_page.png" width="500">
+</p>
 
 ✔ Website mimics legitimate Revenue login  
 ✔ Requests sensitive user credentials  
@@ -75,7 +79,9 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 
 ### 🧾 4.4 WHOIS Analysis
 
-![WHOIS Result](03_whois_result.png)
+<p align="center">
+  <img src="03_whois_result.png" width="600">
+</p>
 
 ### Findings:
 - No WHOIS record found  
@@ -88,7 +94,9 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 
 ### 🌍 4.5 DNS Resolution
 
-![DNS Resolution](04_dns_resolution.png)
+<p align="center">
+  <img src="04_dns_resolution.png" width="600">
+</p>
 
 ### Findings:
 - IP Addresses:
@@ -103,7 +111,9 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 
 ### 🌐 4.6 Nameserver Analysis
 
-![Nameserver Info](05_nameserver_info.png)
+<p align="center">
+  <img src="05_nameserver_info.png" width="600">
+</p>
 
 ### Findings:
 - arvind.ns.cloudflare.com  
@@ -117,7 +127,9 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 
 ### ❌ 4.7 Root Domain Analysis
 
-![Root Domain Check](06_root_domain_check.png)
+<p align="center">
+  <img src="06_root_domain_check.png" width="600">
+</p>
 
 ### Findings:
 - No DNS resolution for root domain  
@@ -130,7 +142,9 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 
 ### 🌍 4.8 IP Address Analysis
 
-![IP Analysis](07_ip_analysis.png)
+<p align="center">
+  <img src="07_ip_analysis.png" width="600">
+</p>
 
 ### Findings:
 - IP belongs to Cloudflare network  
@@ -143,7 +157,9 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 
 ### 🧪 4.9 URLScan Analysis
 
-![URLScan](08_Urlscan.png)
+<p align="center">
+  <img src="08_Urlscan.png" width="600">
+</p>
 
 ### Findings:
 - Domain created recently  
@@ -158,7 +174,9 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 
 ### 📊 4.10 External Validation (Google Safe Browsing)
 
-![Google Report](09_google_report.png)
+<p align="center">
+  <img src="09_google_report.png" width="600">
+</p>
 
 ### Findings:
 - No classification  
