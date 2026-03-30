@@ -35,21 +35,21 @@ The message attempted to lure the victim into clicking a link and entering sensi
 
 ### 4.1 Suspicious SMS
 <p align="center">
-  <img src="images/01_Suspicious.png" width="300">
+  <img src="images/01_Suspicious.png" width="200">
 </p>
 
 ---
 
 ### 4.2 Phishing Login Page
 <p align="center">
-  <img src="images/02_phishing_page.png" width="400">
+  <img src="images/02_phishing_page.png" width="200">
 </p>
 
 ---
 
 ### 4.3 WHOIS Analysis
 <p align="center">
-  <img src="images/03_whois_result.png" width="600">
+  <img src="images/03_whois_result.png" width="200">
 </p>
 
 **Findings:**
@@ -60,7 +60,7 @@ The message attempted to lure the victim into clicking a link and entering sensi
 
 ### 4.4 DNS Resolution
 <p align="center">
-  <img src="images/04_dns_resolution.png" width="600">
+  <img src="images/04_dns_resolution.png" width="300">
 </p>
 
 **Findings:**
@@ -72,7 +72,7 @@ The message attempted to lure the victim into clicking a link and entering sensi
 
 ### 4.5 Nameserver Analysis
 <p align="center">
-  <img src="images/05_nameserver_info.png" width="600">
+  <img src="images/05_nameserver_info.png" width="300">
 </p>
 
 **Findings:**
@@ -83,7 +83,7 @@ The message attempted to lure the victim into clicking a link and entering sensi
 
 ### 4.6 Root Domain Check
 <p align="center">
-  <img src="images/06_root_domain_check.png" width="600">
+  <img src="images/06_root_domain_check.png" width="300">
 </p>
 
 **Findings:**
@@ -94,7 +94,7 @@ The message attempted to lure the victim into clicking a link and entering sensi
 
 ### 4.7 IP Address Analysis
 <p align="center">
-  <img src="images/07_ip_analysis.png" width="600">
+  <img src="images/07_ip_analysis.png" width="300">
 </p>
 
 **Findings:**
@@ -105,7 +105,7 @@ The message attempted to lure the victim into clicking a link and entering sensi
 
 ### 4.8 URLScan Analysis
 <p align="center">
-  <img src="images/08_urlscan.png" width="600">
+  <img src="images/08_urlscan.png" width="300">
 </p>
 
 **Findings:**
@@ -117,7 +117,7 @@ The message attempted to lure the victim into clicking a link and entering sensi
 
 ### 4.9 Google Safe Browsing
 <p align="center">
-  <img src="images/09_Report_google.png" width="600">
+  <img src="images/09_Report_google.png" width="300">
 </p>
 
 **Findings:**
@@ -128,7 +128,7 @@ The message attempted to lure the victim into clicking a link and entering sensi
 
 ### 4.10 Wireshark Analysis (SNI)
 <p align="center">
-  <img src="images/10_Wireshark_SNI.png" width="600">
+  <img src="images/10_Wireshark_SNI.png" width="300">
 </p>
 
 **Findings:**
@@ -139,7 +139,7 @@ The message attempted to lure the victim into clicking a link and entering sensi
 
 ### 4.11 Network Behavior Analysis
 <p align="center">
-  <img src="images/11_Wireshark_Phishing_Analysis.png" width="600">
+  <img src="images/11_Wireshark_Phishing _Analysis.png" width="300">
 </p>
 
 **Findings:**
