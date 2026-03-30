@@ -35,7 +35,7 @@ I captured the encrypted communication between the analyst VM and the malicious 
 
 | SMS Lure (iPhone) | Wireshark SNI Proof | Phishing UI (Spoofed) |
 | :---: | :---: | :---: |
-| <img src="images/Suspicious.png" width="150"> | <img src="Wireshark PNG.png" width="300"> | <img src="Wireshark Phishing Analysis.png" width="300"> |
+| <img src="../images/01_Suspicious.png" width="150"> | <img src="Wireshark PNG.png" width="300"> | <img src="Wireshark Phishing Analysis.png" width="300"> |
 
 ---
 
