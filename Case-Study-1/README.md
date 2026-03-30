@@ -48,7 +48,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 📱 4.1 Suspicious SMS Evidence
 
 <p align="center">
-  <img src="images/01_Suspicious.png" width="150">
+  <img src="..images/01_Suspicious.png" width="150">
 </p>
 
 ✔ SMS contains phishing link  
@@ -59,7 +59,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 🌐 4.2 Phishing Website Analysis
 
 <p align="center">
-  <img src="images/02_phishing_page.png" width="150">
+  <img src="..images/02_phishing_page.png" width="150">
 </p>
 
 ✔ Website mimics legitimate Revenue login  
@@ -80,7 +80,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 🧾 4.4 WHOIS Analysis
 
 <p align="center">
-  <img src="images/03_whois_result.png" width="500">
+  <img src="..images/03_whois_result.png" width="500">
 </p>
 
 ### Findings:
@@ -95,7 +95,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 🌍 4.5 DNS Resolution
 
 <p align="center">
-  <img src="images/04_dns_resolution.png" width="500">
+  <img src="..images/04_dns_resolution.png" width="500">
 </p>
 
 ### Findings:
@@ -112,7 +112,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 🌐 4.6 Nameserver Analysis
 
 <p align="center">
-  <img src="images/05_nameserver_info.png" width="500">
+  <img src="..images/05_nameserver_info.png" width="500">
 </p>
 
 ### Findings:
@@ -128,7 +128,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### ❌ 4.7 Root Domain Analysis
 
 <p align="center">
-  <img src="images/06_root_domain_check.png" width="500">
+  <img src="..images/06_root_domain_check.png" width="500">
 </p>
 
 ### Findings:
@@ -143,7 +143,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 🌍 4.8 IP Address Analysis
 
 <p align="center">
-  <img src="images/07_ip_analysis.png" width="500">
+  <img src="..images/07_ip_analysis.png" width="500">
 </p>
 
 ### Findings:
@@ -158,7 +158,7 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 ### 🧪 4.9 URLScan Analysis
 
 <p align="center">
-  <img src="images/08_Urlscan.png" width="500">
+  <img src="..images/08_Urlscan.png" width="500">
 </p>
 
 ### Findings:
@@ -241,6 +241,17 @@ Instead of assuming it as malicious immediately, a structured investigation meth
 - Enable Multi-Factor Authentication (MFA)  
 - Use trusted security tools  
 - Report phishing attempts to authorities  
+
+---
+---
+
+## 📌 Executive Summary
+This repository serves as a technical deep-dive into **Smishing (SMS Phishing)** attacks. 
+
+Through these investigations, I have successfully:
+1.  **Identified Malicious Infrastructure:** Traced phishing domains masked by Cloudflare proxies.
+2.  **Bypassed Attacker Evasion:** Used manual techniques (User-Agent spoofing) to reveal payloads hidden from automated crawlers.
+3.  **Mapped Attack Patterns:** Correlated findings to the **MITRE ATT&CK Framework** to understand adversary behavior.
 
 ---
 
